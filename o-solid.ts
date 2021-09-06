@@ -1,23 +1,30 @@
-const axios = require('axios');
+// import axios from 'axios';
+class Axios {
+    public get(url: string) {
+        return Promise.resolve({ data: `success ${url}` });
+    }
+}
+
+const axios = new Axios();
 
 class ClientWrapper {
-    public makeGetRequest(url, callback) {
-        return axios
+    public async makeGetRequest(url: string) {
+        return await axios
             .get(url)
-            .then(callback);
+            .then((response: any) => console.log(response.data));
     }
 }
 
 class TodoService {
-    client;
+    client: ClientWrapper;
 
-    constructor(client) {
+    constructor(client: ClientWrapper) {
         this.client = client;
     }
 
-    public requestTodoItems(callback) {
+    public requestTodoItems() {
         const url = 'https://jsonplaceholder.typicode.com/todos/';
-        this.client.makeGetRequest(url, callback);
+        this.client.makeGetRequest(url);
     }
 }
 
@@ -25,7 +32,7 @@ const start = () => {
     const client = new ClientWrapper();
     const todoService = new TodoService(client);
 
-    todoService.requestTodoItems(response => console.log(response.data));
+    todoService.requestTodoItems();
 }
 
 start();

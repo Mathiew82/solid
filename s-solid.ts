@@ -33,7 +33,7 @@ const newUser = new User("Alberto", 39);
 
 // --- Principio de Responsabilidad Única - S de SOLID (Single Responsability Principle)
 interface managementMessage {
-  printMessage<Function>(message: string): void;
+  printMessage(message: string): void;
 }
 
 class PrintMessage implements managementMessage {
@@ -57,3 +57,4 @@ class ManagementError {
 const printMessage = new PrintMessage();
 const managementError = new ManagementError(printMessage);
 managementError.showErrorMessage("Este es un mensaje de error de prueba");
+

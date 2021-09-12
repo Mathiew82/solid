@@ -57,4 +57,3 @@ class ManagementError {
 const printMessage = new PrintMessage();
 const managementError = new ManagementError(printMessage);
 managementError.showErrorMessage("Este es un mensaje de error de prueba");
-

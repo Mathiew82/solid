@@ -6,11 +6,11 @@
 
 ```
 
-#### Ejemplos de los principios SOLID
+### Ejemplos de los principios SOLID
 
 Un ejemplo por cada uno de los principios escritos en Typescript.
 
-##### Huir del código STUPID
+#### Huir del código STUPID
 
 - **Singleton:** patrón singleton
 - **Tight Coupling:** alto acoplamiento
@@ -19,7 +19,7 @@ Un ejemplo por cada uno de los principios escritos en Typescript.
 - **Indescriptive Naming:** nombres poco descriptivos
 - **Duplication:** duplicidad de código
 
-##### Qué significan las siglas de SOLID
+#### Qué significan las siglas de SOLID
 
 - **Single responsability:** responsabilidad única
 - **Open/Closed:** abierto a extensión y cerrado a modificación

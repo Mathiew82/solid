@@ -28,12 +28,9 @@ class User {
 
 const newUser = new User("Alberto", 39);
 
-// console.log(newUser);
-// console.log(newUser.userMessage('Esto es un saludo'));
-
 // --- Principio de Responsabilidad Única - S de SOLID (Single Responsability Principle)
 interface managementMessage {
-  printMessage(message: string): void;
+  printMessage: (message: string) => void;
 }
 
 class PrintMessage implements managementMessage {

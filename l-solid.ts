@@ -1,3 +1,4 @@
+// --- En este ejemplo vemos cómo respetar el principio de sustitución de Liskov
 class Figure {
   public width: number;
   public height: number;

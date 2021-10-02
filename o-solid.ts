@@ -1,4 +1,4 @@
-// import axios from 'axios';
+// --- import axios from 'axios';
 class Axios {
   public get(url: string) {
     return Promise.resolve({ data: `success ${url}` });
